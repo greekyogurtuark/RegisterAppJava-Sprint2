@@ -5,13 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const goBackActionElement = getGoBackActionElement();
-	if (goBackActionElement != null) {
-		goBackActionElement.addEventListener("click", goBackActionClickHandler);
-	}
-})
-
 // AJAX
 function ajaxGet(resourceRelativeUri, callback) {
 	return ajax(resourceRelativeUri, "GET", null, callback);
@@ -176,10 +169,6 @@ function getSignOutActionElement() {
 	return document.getElementById("signOutImage");
 }
 
-function getGoBackActionElement() {
-	return document.getElementById("goBackImage");
-}
-
 function getErrorMessageContainerElement() {
 	return document.getElementById("error");
 }
@@ -195,7 +184,7 @@ function signOutActionClickHandler() {
 		if ((callbackResponse.data != null)
 			&& (callbackResponse.data.redirectUrl != null)
 			&& (callbackResponse.data.redirectUrl !== "")) {
-
+	
 			window.location.replace(callbackResponse.data.redirectUrl);
 		} else {
 			window.location.replace("/");
@@ -203,9 +192,3 @@ function signOutActionClickHandler() {
 	});
 }
 //End sign out
-
-//Back button function
-function goBackActionClickHandler() {
-	window.location.assign("/mainMenu");
-}
-//End back button function

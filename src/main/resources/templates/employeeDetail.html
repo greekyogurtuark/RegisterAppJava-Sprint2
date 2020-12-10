@@ -15,7 +15,7 @@
 	<div class="header">
 		<h1 class="primary-message">Employee Detail</h1>
 	</div>
-
+		
 	<div id="main" class="main">
 		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
 			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
@@ -97,7 +97,6 @@
 
 	<div class="footer" th:classappend="${employee.isInitialEmployee} ? hidden : ''">
 		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
-		<img id="goBackImage" src="/images/backbutton.png" alt="Go Back" class="lfooter" />
 	</div>
 
 </body>
