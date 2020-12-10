@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const signOutActionElement = getSignOutActionElement();
-	const goBackActionElement = getGoBackActionElement();
 	if (signOutActionElement != null) {
 		signOutActionElement.addEventListener("click", signOutActionClickHandler);
-	}
-	if (goBackActionElement != null) {
-		goBackActionElement.addEventListener("click", goBackActionClickHandler);
 	}
 });
 
@@ -173,10 +169,6 @@ function getSignOutActionElement() {
 	return document.getElementById("signOutImage");
 }
 
-function getGoBackActionElement() {
-	return document.getElementById("goBackImage");
-}
-
 function getErrorMessageContainerElement() {
 	return document.getElementById("error");
 }
@@ -200,9 +192,3 @@ function signOutActionClickHandler() {
 	});
 }
 //End sign out
-
-//Back button function
-function goBackActionClickHandler() {
-	window.location.replace("/mainMenu");
-}
-//End back button function

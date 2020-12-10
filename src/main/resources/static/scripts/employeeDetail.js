@@ -1,13 +1,13 @@
 let hideEmployeeSavedAlertTimer = undefined;
 
 document.addEventListener("DOMContentLoaded", () => {
-	document.getElementById("saveButton")
-		.addEventListener("click", saveActionClick);
-
-	const employeeFirstNameEditElement =
-		getEmployeeFirstNameEditElement();
+	document.getElementById("saveButton").addEventListener("click", saveActionClick);
+	const goBackElement = document.getElementById("goBackImage");
+	const employeeFirstNameEditElement = getEmployeeFirstNameEditElement();
 	employeeFirstNameEditElement.focus();
 	employeeFirstNameEditElement.select();
+
+	goBackElement.addEventListener("click", goBackClick);
 });
 
 // Save
@@ -106,7 +106,7 @@ function completeSaveAction(callbackResponse) {
 		window.location.replace(callbackResponse.data.redirectUrl);
 		return;
 	}
-	
+
 	displayEmployeeSavedAlertModal();
 
 	const employeeEmployeeIdElement = getEmployeeEmployeeIdElement();
@@ -182,3 +182,7 @@ function getEmployeeTypeSelectElement() {
 	return document.getElementById("employeeType");
 }
 //End getters and setters
+
+function goBackClick() {
+	window.location.assign("/mainMenu");
+}

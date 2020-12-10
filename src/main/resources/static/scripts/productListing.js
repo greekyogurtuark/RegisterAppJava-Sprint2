@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const productListElements = document.getElementById("productsListing").children;
-
+	const goBackElement = document.getElementById("goBackImage");
 	for (let i = 0; i < productListElements.length; i++) {
 		productListElements[i].addEventListener("click", productClick);
 	}
+	goBackElement.addEventListener("click", goBackClick);
 });
 
 function findClickedListItemElement(clickedTarget) {
@@ -31,4 +32,8 @@ function productClick(event) {
 	window.location.assign(
 		"/productDetail/"
 		+ listItem.querySelector("input[name='productId'][type='hidden']").value);
+}
+
+function goBackClick() {
+	window.location.assign("/mainMenu");
 }

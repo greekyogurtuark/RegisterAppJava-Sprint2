@@ -2,12 +2,15 @@ let hideProductSavedAlertTimer = undefined;
 
 document.addEventListener("DOMContentLoaded", () => {
 	const productLookupCodeElement = getProductLookupCodeElement();
+	const goBackElement = document.getElementById("goBackImage");
 
 	getProductCountElement().addEventListener("keypress", productCountKeypress);
 	productLookupCodeElement.addEventListener("keypress", productLookupCodeKeypress);
-	
+
 	getSaveActionElement().addEventListener("click", saveActionClick);
 	getDeleteActionElement().addEventListener("click", deleteActionClick);
+
+	goBackElement.addEventListener("click", goBackClick);
 
 	if (!productLookupCodeElement.disabled) {
 		productLookupCodeElement.focus();
@@ -174,3 +177,7 @@ function getProductCountElement() {
 	return document.getElementById("productCount");
 }
 // End getters and setters
+
+function goBackClick() {
+	window.location.assign("/mainMenu");
+}
