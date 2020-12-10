@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const signOutActionElement = getSignOutActionElement();
+	const goBackActionElement = getGoBackActionElement();
 	if (signOutActionElement != null) {
 		signOutActionElement.addEventListener("click", signOutActionClickHandler);
+	}
+	if (goBackActionElement != null) {
+		goBackActionElement.addEventListener("click", goBackActionClickHandler);
 	}
 });
 
