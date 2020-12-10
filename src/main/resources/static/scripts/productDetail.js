@@ -1,6 +1,6 @@
 let hideProductSavedAlertTimer = undefined;
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function(event) {
 	const productLookupCodeElement = getProductLookupCodeElement();
 	const goBackElement = document.getElementById("goBackImage");
 

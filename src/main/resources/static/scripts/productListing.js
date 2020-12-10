@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function(event) {
 	const productListElements = document.getElementById("productsListing").children;
 	const goBackElement = document.getElementById("goBackImage");
 	for (let i = 0; i < productListElements.length; i++) {
