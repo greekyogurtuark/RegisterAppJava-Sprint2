@@ -48,7 +48,7 @@ img.footer {
 	bottom: 20;
 }
 
-img.lfooter {
+button.lfooter {
 	z-index: 1;
 	height: 50px;
 		text-decoration: none;
