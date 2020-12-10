@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (signOutActionElement != null) {
 		signOutActionElement.addEventListener("click", signOutActionClickHandler);
 	}
+
 });
 
 // AJAX

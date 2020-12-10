@@ -35,5 +35,6 @@ function productClick(event) {
 }
 
 function goBackClick() {
+	alert("Hello World!");
 	window.location.assign("/mainMenu");
 }

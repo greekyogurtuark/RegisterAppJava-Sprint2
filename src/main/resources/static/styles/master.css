@@ -48,9 +48,9 @@ img.footer {
 	bottom: 20;
 }
 
-button.lfooter {
+img.lfooter {
 	z-index: 1;
-	height: 50px;
+	heught: 50px;
 		text-decoration: none;
 		display: inline-block;
 	cursor: pointer;
