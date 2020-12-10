@@ -2,7 +2,7 @@
 
 <head>
 	<title>Register - Product</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="/styles/master.css">
 	<link rel="stylesheet" type="text/css" href="/styles/productDetail.css">
@@ -16,7 +16,7 @@
 	<div class="header">
 		<h1 class="primary-message">Product Detail</h1>
 	</div>
-		
+
 	<div id="main" class="main">
 		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
 			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
@@ -71,8 +71,9 @@
 
 	<div class="footer">
 		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+		<img id="goBackImage" src="/images/backbutton.png" alt="Go Back" class="lfooter" />
 	</div>
-		
+
 </body>
 
 </html>
