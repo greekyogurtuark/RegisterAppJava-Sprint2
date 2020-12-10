@@ -9,13 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	const goBackActionElement = getGoBackActionElement();
-	if (goBackActionElement != null) {
-		goBackActionElement.addEventListener("click", goBackActionClickHandler);
-	}
-})
-
 // AJAX
 function ajaxGet(resourceRelativeUri, callback) {
 	return ajax(resourceRelativeUri, "GET", null, callback);
@@ -210,6 +203,6 @@ function signOutActionClickHandler() {
 
 //Back button function
 function goBackActionClickHandler() {
-	window.location.assign("/mainMenu");
+	window.location.replace("/mainMenu");
 }
 //End back button function
